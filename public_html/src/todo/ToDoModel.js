@@ -308,6 +308,7 @@ export default class ToDoModel {
 
     //REMOVES ALL THE TASKS FROM THE WORKSPACE
     clearTasksList(){
+        document.getElementById("todo-lists-list").firstChild.className ="todo_button textCard";
         this.view.clearTasksList();
     }
 

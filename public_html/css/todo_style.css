@@ -80,8 +80,8 @@
   border-bottom: dotted;
 }
 
-#todo-list-table-header {
-  border-bottom: dotted;
+.todo-list-table-header {
+  border-bottom: dotted !important;
 }
 
 .list-header-card {
@@ -101,6 +101,10 @@
   background-color: var(--swatch-contrast);
 }
 
+.listselected {
+  background-color: #f5bc75;
+}
+
 /*** MODAL STYLING ***/
 .modal {
   display: none; /* Hidden by default */
@@ -117,7 +121,8 @@
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background-color: var(--swatch-primary);
+  font-family: var(--font-primary);
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;

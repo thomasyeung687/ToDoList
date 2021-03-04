@@ -55,7 +55,7 @@ export default class ToDoView {
                 }else if (clicks === 1 && clicks != 2) {
                     console.log("single clicked");
                     thisController.handleLoadList(newList.id);//call moveListToTop function.
-                    document.getElementById(newListId).style.backgroundColor = "#ffc819";
+                    document.getElementById(newListId).className = "todo_button textCard listselected";
                 }
             }, 250); 
         })
@@ -134,9 +134,9 @@ export default class ToDoView {
                 arrowDown.className = "list-item-control material-icons noHover";
             }
             if(listItem.status == "complete"){
-                statusCol.style.color = "blue";
+                statusCol.style.color = "#8ed4f8";
             }else{
-                statusCol.style.color = "yellow";
+                statusCol.style.color = "#f5bc75";
             }
             taskCol.onmousedown = function (event) {
                 console.log("taskcol-pressed id="+listItem.id);
