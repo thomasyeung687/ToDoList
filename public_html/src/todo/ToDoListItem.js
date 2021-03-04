@@ -2,7 +2,7 @@
 
 /**
  * ToDoListItem.js
- * 
+ * DataType
  * This class represents an item for our list.
  * 
  * @author McKilla Gorilla

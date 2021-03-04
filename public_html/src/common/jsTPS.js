@@ -133,7 +133,7 @@ export default class jsTPS {
      * 
      * @param {jsTPS_Transaction} transaction Transaction to add to the stack and do.
      */
-    addTransaction(transaction) {
+    addTransaction(transaction) { //transaction is a state change of some kind
         // ARE WE BRANCHING?
         if ((this.mostRecentTransaction < 0) 
             || (this.mostRecentTransaction < (this.transactions.length - 1))) {
@@ -167,6 +167,11 @@ export default class jsTPS {
             transaction.doTransaction();
             this.mostRecentTransaction++;
             this.performingDo = false;
+            document.getElementById("undo-button").className = "material-icons todo_button";
+            
+        }
+        if(!this.hasTransactionToRedo()){
+            document.getElementById("redo-button").className = "material-icons noHover";
         }
     }
 
@@ -181,6 +186,11 @@ export default class jsTPS {
             transaction.undoTransaction();
             this.mostRecentTransaction--;
             this.performingUndo = false;
+            document.getElementById("redo-button").className = "material-icons todo_button";
+        }
+        //checks if there are more transactiosn to undo.
+        if(!this.hasTransactionToUndo()){
+            document.getElementById("undo-button").className = "material-icons noHover";
         }
     }
 
@@ -191,6 +201,7 @@ export default class jsTPS {
      */
     clearAllTransactions() {
         // REMOVE ALL THE TRANSACTIONS
+        console.log("clearing all transactions");
         this.transactions = new Array();
         
         // MAKE SURE TO RESET THE LOCATION OF THE

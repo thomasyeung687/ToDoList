@@ -1,71 +1,144 @@
 :root {
-    /* 
+  /* 
         FIRST WE'LL DEFINE OUR SWATCHES, i.e. THE COMPLEMENTARY
         COLORS THAT WE'LL USE TOGETHER IN MULTIPLE PLACES THAT
         TOGETHER WILL MAKE UP A GIVEN THEME
     */
-    --swatch-foundation:    #d9d6cc; /* USED FOR BODY BACKGROUND */
-    --swatch-primary:       #40454e; /* DOMINANT COLOR, USED FOR MOST BACKGROUNDS */
-    --swatch-complement:    #353a44; /* USED IN CONTRAST BACKGROUND FOR TOOLBARS */
-    --swatch-contrast:      #111111; /* USED IN MOUSE-OVER SELECTION OF LARGE ELEMENTS */
-    --swatch-accent:        #ffc819; /* USED IN MOUSE-OVER SELECTION OF TEXT AND BORDERS */  
+  --swatch-foundation: #d9d6cc; /* USED FOR BODY BACKGROUND */
+  --swatch-primary: #40454e; /* DOMINANT COLOR, USED FOR MOST BACKGROUNDS */
+  --swatch-complement: #353a44; /* USED IN CONTRAST BACKGROUND FOR TOOLBARS */
+  --swatch-contrast: #b3aaaa; /* USED IN MOUSE-OVER SELECTION OF LARGE ELEMENTS */
+  --swatch-accent: #ffc819; /* USED IN MOUSE-OVER SELECTION OF TEXT AND BORDERS */
 
-    --swatch-text:          #e9edf0; /* USED IN MOUSE-OVER SELECTION OF TEXT AND BORDERS */ 
-    --swatch-text-accent:   #ffc819; /* USED IN MOUSE-OVER SELECTION OF TEXT AND BORDERS */  
+  --swatch-text: #e9edf0; /* USED IN MOUSE-OVER SELECTION OF TEXT AND BORDERS */
+  --swatch-text-accent: #ffc819; /* USED IN MOUSE-OVER SELECTION OF TEXT AND BORDERS */
 
-    --font-primary:         'Lexend Exa', sans-serif;
+  --font-primary: "Consolas";
 }
 
 #grid-container {
-    background-color: var(--swatch-foundation);
-    font-family: var(--font-primary);
+  background-color: var(--swatch-foundation);
+  font-family: var(--font-primary);
 }
 
 .grid-item {
-    background-color: var(--swatch-primary);
+  background-color: var(--swatch-primary);
+}
+.list-item {
+  height: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.list-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 5%;
+  width: 90%;
+  height: 100%;
+  text-align: center;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 #navbar {
-    box-shadow: 2px 2px 2px var(--swatch-primary); 
+  box-shadow: 2px 2px 2px var(--swatch-primary);
 }
 
 #left-sidebar {
-    background-color: var(--swatch-complement);
-    color: rgb(233,237,240);
+  background-color: var(--swatch-complement);
+  color: rgb(233, 237, 240);
 }
 
 #workspace {
-    background-color: var(--swatch-primary);
-    color: rgb(233,237,240);
+  background-color: var(--swatch-primary);
+  color: rgb(233, 237, 240);
 }
 
 #title-div {
-    color: rgb(255,200,25);
-    font-weight: bold;
-    font-size: 14pt;
+  color: rgb(255, 200, 25);
+  font-weight: bold;
+  font-size: 14pt;
 }
 
 #left-sidebar-header {
-    border-bottom: dotted;
+  border-bottom: dotted;
 }
 
 #todo-list-table-header {
-    border-bottom: dotted;
+  border-bottom: dotted;
 }
 
 .list-header-card {
-    border-bottom: dotted;
+  border-bottom: dotted;
 }
 
 .list-item-card {
-    border-bottom: solid;
+  border-bottom: solid;
 }
 
 .todo_button {
-    cursor:pointer;
-    background-color: var(--swatch-complement);
+  cursor: pointer;
+  background-color: var(--swatch-primary);
 }
 
 .todo_button:hover {
-    background-color: var(--swatch-contrast);
+  background-color: var(--swatch-contrast);
+}
+
+/*** MODAL STYLING ***/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.noHover {
+  pointer-events: none;
+  color: #888 !important;
 }

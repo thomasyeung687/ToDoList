@@ -4,6 +4,10 @@ import ToDoModel from './ToDoModel.js'
 import ToDoView from './ToDoView.js'
 import ToDoController from './ToDoController.js'
 
+/**
+ * launches application
+ * actually the app. builds the components sets them up and launches it. sets up and launches from a json file (data)
+ */
 export class ToDoTrackerApp {
     constructor() {
         // FIRST MAKE THE APP COMPONENTS
