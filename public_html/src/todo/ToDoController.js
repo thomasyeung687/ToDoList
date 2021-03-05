@@ -62,9 +62,9 @@ export default class ToDoController {
             document.getElementById("undo-button").className = "material-icons noHover";
             document.getElementById("redo-button").className = "material-icons noHover";
 
-            document.getElementById("add-item-button").className = "list-item-control material-icons noHover";
-            document.getElementById("delete-list-button").className = "list-item-control material-icons noHover";
-            document.getElementById("close-list-button").className = "list-item-control material-icons noHover";
+            document.getElementById("add-item-button").className = "listeditdissapear";
+            document.getElementById("delete-list-button").className = "listeditdissapear";
+            document.getElementById("close-list-button").className = "listeditdissapear";
             appModel.clearTasksList();
             // document.getElementById("add-list-button").style = "noHover";
         }
