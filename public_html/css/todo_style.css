@@ -28,6 +28,8 @@
   height: 100%;
   overflow: scroll;
   overflow-x: hidden;
+  scrollbar-color: #b3aaaa #353a44;
+  scrollbar-width: thin;
 }
 .list-text {
   white-space: nowrap;

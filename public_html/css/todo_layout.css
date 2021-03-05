@@ -51,6 +51,8 @@
   flex-direction: column;
   overflow: scroll;
   overflow-x: hidden;
+  scrollbar-color: #b3aaaa #353a44;
+  scrollbar-width: thin;
 }
 
 #todo-list-items-div {
