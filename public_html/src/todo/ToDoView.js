@@ -145,7 +145,7 @@ export default class ToDoView {
                 var inputTypeText = document.createElement("input");
                 inputTypeText.setAttribute("type", "text");
                 inputTypeText.setAttribute("value", listItem.description);
-                inputTypeText.className = "task-col";
+                inputTypeText.className = "task-col inputs";
                 // inputTypeText.onclick = function (event){
                 //     console.log("changing taskDesc id="+listItem.id);
                 // }
@@ -161,7 +161,7 @@ export default class ToDoView {
                 var inputTypeDate = document.createElement("input");
                 inputTypeDate.setAttribute("type", "date");
                 inputTypeDate.setAttribute("value", listItem.dueDate);
-                inputTypeDate.className = "due-date-col";
+                inputTypeDate.className = "due-date-col inputs";
                 inputTypeDate.addEventListener("focusout", (event)=>{
                     console.log("focus out list.id:"+list.id+" listItem.id:"+listItem.id+" value:"+inputTypeDate.value);
                     myController.handleEditTaskDueDate(listItem.id, inputTypeDate.value);
@@ -196,7 +196,7 @@ export default class ToDoView {
                     console.log("handleEditTaskStatus listItem.id="+listItem.id+" value:"+inputTypeDropDown.value);
                     myController.handleEditTaskStatus(listItem.id, inputTypeDropDown.value);
                 })
-                inputTypeDropDown.className = "status-col";
+                inputTypeDropDown.className = "status-col inputs";
                 listItemDiv.replaceChild(inputTypeDropDown, oldStatus);
             }
             arrowUp.onmousedown = function (event) {

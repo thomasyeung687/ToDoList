@@ -151,3 +151,9 @@
 .listeditdissapear {
   display: none;
 }
+
+.inputs {
+  background-color: var(--swatch-primary);
+  text-align: center;
+  color: black;
+}
