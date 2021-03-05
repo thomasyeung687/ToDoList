@@ -35,6 +35,8 @@
 #left-sidebar-header-text {
   width: fit-content;
   max-width: 45%;
+  padding: 10px;
+  margin: 10px;
 }
 
 #left-sidebar-controls {
